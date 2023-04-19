@@ -19,8 +19,8 @@ app.get("/",(req,res)=>{
 })
 
 ///
-app.get("/contato",(req,res)=>{
-                  res.render("contato/index")
+app.get("/faleComAgente",(req,res)=>{
+                  res.render("faleComAgente/index")
 })
 
 ///
