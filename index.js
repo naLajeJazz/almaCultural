@@ -1,7 +1,18 @@
 const bodyParser = require("body-parser");
 const express = require("express");
 const app = express();
+const connection=require("./database/database");
+const falacomagente_data_form=require("./database/falacomagente");
 
+
+//database
+connection.authenticate()
+          .then(()=>{
+                  console.log("conecção feita com o banco de dados!")
+          })
+          .catch((msgErro)=>{
+                  console.log(msgErro)
+          });
 
 // View engine
 app.set('view engine','ejs');
@@ -14,21 +25,36 @@ app.use(bodyParser.urlencoded({extended:false}));
 app.use(bodyParser.json());
 
 
+//rotas
 
 ///
 app.get("/",(req,res)=>{
                   res.render("home/index")
-})
+});
 
 ///
 app.get("/faleComAgente",(req,res)=>{
                   res.render("faleComAgente/index")
-})
+});
+
+
+//colhendo dados do form e enviando para o banco de dados
 app.post("/contatosubmit",(req,res)=>{
-                  res.send("foi")
-})
+                  var name_form=req.body.name_form;
+                  var email_form=req.body.email_form;
+                  var msg_form=req.body.msg_form;
+                  
+                  falacomagente_data_form.create({
+                                    name_form:name_form,
+                                    email_form:email_form,
+                                    msg_form:msg_form
+                  }).then(()=>{
+                                    res.redirect("/faleComAgente")
+
+                  })
+});
 
 ///
 app.listen(1313,()=>{
                   console.log("O servidor está rodando!")
-})
+});
