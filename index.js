@@ -9,7 +9,9 @@ app.set('view engine','ejs');
 // static
 app.use(express.static('public'));
 
-
+//bodyParser
+app.use(bodyParser.urlencoded({extended:false}));
+app.use(bodyParser.json());
 
 
 
@@ -21,6 +23,9 @@ app.get("/",(req,res)=>{
 ///
 app.get("/faleComAgente",(req,res)=>{
                   res.render("faleComAgente/index")
+})
+app.post("/contatosubmit",(req,res)=>{
+                  res.send("foi")
 })
 
 ///
