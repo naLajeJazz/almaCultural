@@ -34,6 +34,10 @@ app.get("/",(req,res)=>{
 
 ///
 app.get("/faleComAgente",(req,res)=>{
+
+        falacomagente_data_form.findAll({raw:true}).then(data=>{
+                console.log(data)
+        })
                   res.render("faleComAgente/index")
 });
 
@@ -57,4 +61,5 @@ app.post("/contatosubmit",(req,res)=>{
 ///
 app.listen(1313,()=>{
                   console.log("O servidor está rodando!")
+                  console.log("localhost:1313")
 });
