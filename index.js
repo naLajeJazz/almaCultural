@@ -4,6 +4,11 @@ const app = express();
 const connection=require("./database/database");
 const falacomagente_data_form=require("./database/falacomagente");
 
+const categoriesController=require("./categories/CategoriesController");
+const articlesController=require("./articles/ArticlesController");
+
+const Article=require("./articles/Article");
+const Category=require("./categories/Category");
 
 //database
 connection.authenticate()
@@ -36,9 +41,15 @@ app.get("/",(req,res)=>{
 app.get("/faleComAgente",(req,res)=>{
 
         falacomagente_data_form.findAll({raw:true}).then(data=>{
-                console.log(data)
+                //console.log(data)
         })
                   res.render("faleComAgente/index")
+});
+
+///
+app.get("/admin",(req,res)=>{
+
+                res.render("admin/categories/new")
 });
 
 
@@ -57,6 +68,14 @@ app.post("/contatosubmit",(req,res)=>{
 
                   })
 });
+
+//
+app.use("/",categoriesController);
+app.use("/",articlesController);
+
+
+
+
 
 ///
 app.listen(1313,()=>{
