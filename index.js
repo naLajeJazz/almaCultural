@@ -46,11 +46,6 @@ app.get("/faleComAgente",(req,res)=>{
                   res.render("faleComAgente/index")
 });
 
-///
-app.get("/admin",(req,res)=>{
-
-                res.render("admin/categories/new")
-});
 
 
 //colhendo dados do form e enviando para o banco de dados
