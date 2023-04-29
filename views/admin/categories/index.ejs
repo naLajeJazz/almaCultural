@@ -1,36 +1,45 @@
 <%- include("../../partials/header") %>
 <%- include("../../partials/menu") %>
    
+<div class="container">
+
+
+  <h2>Categorias</h2>
+<a class="btn btn-success" href="/admin/categories/new"> criar nova categoria </a>
+
 
 <table class="table text-light">
                   <thead>
                     <tr>
-                      <th scope="col">#</th>
-                      <th scope="col">First</th>
-                      <th scope="col">Last</th>
-                      <th scope="col">Handle</th>
+                      
+                      <th scope="col">id</th>
+                      <th scope="col">title</th>
+                      <th scope="col">slug</th>
+                      <th scope="col">açoes</th>
                     </tr>
                   </thead>
                   <tbody>
+                    
+                    <% categories.forEach(category=>{%> 
+
+
                     <tr>
-                      <th scope="row">1</th>
-                      <td>Mark</td>
-                      <td>Otto</td>
-                      <td>@mdo</td>
+                      
+                      <td><%= category.id  %></td>
+                      <td><%= category.title  %></td>
+                      <td><%= category.slug %></td>
+                      <td>
+                        <button class="btn btn-warning">editar</button>
+                        <button class="btn btn-danger">deletar</button>
+                      </td>
                     </tr>
-                    <tr>
-                      <th scope="row">2</th>
-                      <td>Jacob</td>
-                      <td>Thornton</td>
-                      <td>@fat</td>
-                    </tr>
-                    <tr>
-                      <th scope="row">3</th>
-                      <td colspan="2">Larry the Bird</td>
-                      <td>@twitter</td>
-                    </tr>
+
+                  <% }) %>
+
                   </tbody>
                 </table>
+
+</div>
 
 <%- include('../../partials/footer'); %>            
                                     

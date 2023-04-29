@@ -49,7 +49,7 @@ app.get("/faleComAgente",(req,res)=>{
 
 
 //colhendo dados do form e enviando para o banco de dados
-app.post("/contatosubmit",(req,res)=>{
+app.post("/falaComAgenteForm",(req,res)=>{
                   var name_form=req.body.name_form;
                   var email_form=req.body.email_form;
                   var msg_form=req.body.msg_form;
