@@ -46,6 +46,13 @@ app.get("/faleComAgente",(req,res)=>{
                   res.render("faleComAgente/index")
 });
 
+///
+app.get("/quemSomos",(req,res)=>{
+
+        
+                  res.render("quemSomos/index")
+});
+
 
 
 //colhendo dados do form e enviando para o banco de dados
