@@ -1,3 +1,4 @@
+/*
 const Sequelize=require('sequelize');
 const connection=require('./database');
 const falacomagente_data_form=connection.define('falacomogente_data_form',{
@@ -20,3 +21,4 @@ falacomagente_data_form.sync({force:false}).then(()=>{
 });
 
 module.exports=falacomagente_data_form
+*/
