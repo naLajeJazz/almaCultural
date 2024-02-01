@@ -72,9 +72,10 @@ app.post("/falaComAgenteForm",(req,res)=>{
 });
 
 //
+/*
 app.use("/",categoriesController);
 app.use("/",articlesController);
-
+*/
 
 
 
