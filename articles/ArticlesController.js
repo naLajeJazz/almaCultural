@@ -1,4 +1,4 @@
-const express=require("express");
+/*const express=require("express");
 const router=express.Router();
 
 router.get("/articles",(req,res)=>{
@@ -9,4 +9,4 @@ router.get("/admin/articles/new",(req,res)=>{
                   res.send("rota admin")
 });
 
-module.exports=router;
+module.exports=router;*/

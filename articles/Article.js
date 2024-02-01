@@ -1,4 +1,4 @@
-const Sequelize=require("sequelize");
+/*const Sequelize=require("sequelize");
 const connection=require("../database/database");
 const Category=require("../categories/Category");
 
@@ -21,4 +21,4 @@ Article.belongsTo(Category);
 
 
 
-module.exports=Article;
+module.exports=Article;*/
