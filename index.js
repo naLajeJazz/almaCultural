@@ -85,8 +85,17 @@ app.use("/",articlesController);
 
 
 
-///
+/*
 app.listen(1313,()=>{
                   console.log("O servidor está rodando!")
                   console.log("localhost:1313")
+});
+*/
+app.listen(process.env.PORT || 1011, function (erro) {
+
+        erro ?
+                console.log("opa aconteceu um erro!") :
+                console.table(["oba servidor rodando!", "localhost:1011"]);
+                
+
 });
