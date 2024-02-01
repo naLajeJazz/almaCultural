@@ -1,3 +1,4 @@
+/*
 const express=require("express");
 const router=express.Router();
 const Category=require("./Category");
@@ -38,3 +39,4 @@ router.post("/categories/save",(req,res)=>{
 
 
 module.exports=router;
+*/

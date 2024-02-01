@@ -1,6 +1,7 @@
 const bodyParser = require("body-parser");
 const express = require("express");
 const app = express();
+/*
 const connection=require("./database/database");
 const falacomagente_data_form=require("./database/falacomagente");
 
@@ -9,6 +10,7 @@ const articlesController=require("./articles/ArticlesController");
 
 const Article=require("./articles/Article");
 const Category=require("./categories/Category");
+*/
 /*
 //database
 connection.authenticate()
