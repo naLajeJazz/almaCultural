@@ -9,7 +9,7 @@ const articlesController=require("./articles/ArticlesController");
 
 const Article=require("./articles/Article");
 const Category=require("./categories/Category");
-
+/*
 //database
 connection.authenticate()
           .then(()=>{
@@ -18,7 +18,7 @@ connection.authenticate()
           .catch((msgErro)=>{
                   console.log(msgErro)
           });
-
+*/
 // View engine
 app.set('view engine','ejs');
 
@@ -39,10 +39,10 @@ app.get("/",(req,res)=>{
 
 ///
 app.get("/faleComAgente",(req,res)=>{
-
+/*
         falacomagente_data_form.findAll({raw:true}).then(data=>{
                 //console.log(data)
-        })
+        })*/
                   res.render("faleComAgente/index")
 });
 
@@ -54,9 +54,10 @@ app.get("/quemSomos",(req,res)=>{
 });
 
 
-
+/*
 //colhendo dados do form e enviando para o banco de dados
 app.post("/falaComAgenteForm",(req,res)=>{
+        
                   var name_form=req.body.name_form;
                   var email_form=req.body.email_form;
                   var msg_form=req.body.msg_form;
@@ -69,8 +70,10 @@ app.post("/falaComAgenteForm",(req,res)=>{
                                     res.redirect("/faleComAgente")
 
                   })
-});
 
+                  
+});
+*/
 //
 /*
 app.use("/",categoriesController);
